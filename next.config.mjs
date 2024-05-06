@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        formats: ['image/webp', 'image/avif'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'soul-menu-prod.s3.eu-central-1.amazonaws.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
+    },
+};
 
 export default nextConfig;
