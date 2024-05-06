@@ -2,8 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 
-function Home({ data }) {
-    console.log(data);
+function Home({ data }: any) {
     const { groups } = data;
 
     return (
@@ -12,7 +11,7 @@ function Home({ data }) {
                 Home page
             </h1>
 
-            {groups.map((group) => {
+            {groups.map((group: any) => {
                 const { imageUrl, subId } = group;
 
                 if (!imageUrl) {
