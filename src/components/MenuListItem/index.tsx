@@ -3,16 +3,16 @@ import Image from 'next/image';
 import ProductsList from '@/components/ProductsList';
 
 function MenuListItem({ menuItem }: any) {
-    const { imageUrl, subId, items } = menuItem;
+    const { imageUrl, items } = menuItem;
 
     return (
-        <div key={subId}>
-            <h3 className="font-bold text-2xl mb-3">{menuItem.name.ua}</h3>
+        <div className="flex flex-col">
+            <h3 className="font-bold text- mb-3">{menuItem.name.ua}</h3>
 
             <Image
                 className="mb-3"
                 src={imageUrl}
-                alt={menuItem.category}
+                alt={menuItem.name.ua}
                 width={300}
                 height={500}
             />

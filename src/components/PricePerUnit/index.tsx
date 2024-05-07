@@ -3,11 +3,11 @@ import React from 'react';
 function PricePerUnit({ pricesPerUnitItems, volumeUnit }: any) {
     return (
         <div className="flex gap-4">
-            {pricesPerUnitItems.map((pricesPerUnitItem: any) => {
+            {pricesPerUnitItems.map((pricesPerUnitItem: any, index: any) => {
                 const { price, volume } = pricesPerUnitItem;
 
                 return (
-                    <div className="flex flex-col">
+                    <div key={index} className="flex flex-col">
                         <div className="text-2xl">{price}</div>
                         <div className="flex items-end gap-0.5">
                             <span className="text-sm">{volume}</span>
