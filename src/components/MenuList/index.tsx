@@ -3,7 +3,7 @@ import MenuListItem from '@/components/MenuListItem';
 
 function MenuList({ menuItems }: any) {
     return (
-        <div className="flex flex-col gap-6 w-full">
+        <div className="flex flex-col w-full">
             {menuItems.map((menuItem: any, index: number) => {
                 if (!menuItem.imageUrl) {
                     return null;

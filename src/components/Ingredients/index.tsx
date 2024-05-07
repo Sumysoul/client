@@ -16,7 +16,7 @@ function Ingredients({ ingredients }: any) {
 
     return (
         ingredientsString ? (
-            <h4 className="text-xs">
+            <h4 className="text-sm">
                 {ingredientsString}
             </h4>
         ) : null

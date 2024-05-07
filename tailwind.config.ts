@@ -9,6 +9,10 @@ const config: Config = {
             fontFamily: {
                 sans: ['var(--font-inter)'],
             },
+
+            backgroundImage: {
+                'linear-gradient-1': 'linear-gradient(270deg, rgba(197, 197, 198, 1) 25%, rgba(0, 0, 0, 0) 100%)',
+            },
         },
     },
     plugins: [],

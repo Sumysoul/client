@@ -7,8 +7,8 @@ function PricePerUnit({ pricesPerUnitItems, volumeUnit }: any) {
                 const { price, volume } = pricesPerUnitItem;
 
                 return (
-                    <div key={index} className="flex flex-col">
-                        <div className="text-2xl">{price}</div>
+                    <div key={index} className="flex flex-col text-right">
+                        <div className="text-2xl font-semibold">{price}</div>
                         <div className="flex items-end gap-0.5">
                             <span className="text-sm">{volume}</span>
                             <span className="text-xs mb-[1px]">{volumeUnit.ua}</span>
