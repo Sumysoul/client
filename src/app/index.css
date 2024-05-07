@@ -9,7 +9,12 @@ body > div:first-child,
     @apply h-full;
 }
 
+* {
+    @apply box-border
+}
+
 .page-main {
     @apply flex;
     @apply flex-col;
+    @apply items-center;
 }
