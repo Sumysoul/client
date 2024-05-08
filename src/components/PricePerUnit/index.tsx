@@ -2,7 +2,7 @@ import React from 'react';
 
 function PricePerUnit({ pricesPerUnitItems, volumeUnit }: any) {
     return (
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap justify-end">
             {pricesPerUnitItems.map((pricesPerUnitItem: any, index: any) => {
                 const { price, volume } = pricesPerUnitItem;
 
