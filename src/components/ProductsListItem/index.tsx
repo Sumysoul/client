@@ -10,7 +10,7 @@ function ProductsListItem({ productItem }: any) {
     return (
         <div className="flex justify-between items-start gap-4">
             <div className="flex flex-col gap-1">
-                <h4 className="text-xl">{name.ua}</h4>
+                <h4 className="text-xl font-semibold">{name.ua}</h4>
 
                 <h4 className="text-sm">{name.eng}</h4>
 
