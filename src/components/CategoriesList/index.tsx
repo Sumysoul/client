@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 
 function CategoriesList({ menuItems }: any) {
+    const [isVisible, setIsVisible] = useState(false);
+    const onSwiperInit = () => {
+        setIsVisible(true);
+    };
+
     return (
-        <div className="w-full after:block after:absolute after:right-0 after:top-0
-        after:h-full after:w-[30px] after:z-10 after:bg-linear-gradient-1"
+        <div className={`w-full after:block after:absolute after:right-0 after:top-0 transition-opacity duration-200
+        after:h-full after:w-[30px] after:z-10 after:bg-linear-gradient-1 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
         >
             <Swiper
                 spaceBetween={16}
                 slidesPerView={'auto'}
+                onAfterInit={onSwiperInit}
             >
                 {menuItems.map((menuItem: any, index: number) => {
                     const { name, subId } = menuItem;
