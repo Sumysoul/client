@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 
 function Home({ data }: any) {
     const { groups } = data;
-    console.log(data);
+
     return (
         <>
             <Header menuItems={groups} />
