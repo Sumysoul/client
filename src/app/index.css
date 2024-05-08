@@ -8,8 +8,7 @@ html {
 
 html,
 body,
-body > div:first-child,
-.page-main {
+body > div:first-child {
     @apply min-h-full;
 }
 
@@ -22,6 +21,7 @@ body > div:first-child,
     @apply flex;
     @apply flex-col;
     @apply items-center;
+    @apply min-h-[100vh]
 }
 
 ul,
