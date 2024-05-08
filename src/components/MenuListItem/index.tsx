@@ -10,7 +10,7 @@ function MenuListItem({ menuItem }: any) {
         <div id={subId} className="flex flex-col pt-12">
             <h3 className="font-bold text-2xl border-b border-b-white pb-2 mb-6">{menuItem.name.ua}</h3>
 
-            <div className="w-full h-[100px] md:h-[80px] rounded-xl overflow-hidden mb-6 relative">
+            <div className="w-full h-[80px] md:h-[100px] rounded-xl overflow-hidden mb-6 relative">
                 <Image
                     src={imageUrl}
                     alt={menuItem.name.ua}
