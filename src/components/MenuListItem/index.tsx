@@ -15,7 +15,7 @@ function MenuListItem({ menuItem }: any) {
                     src={imageUrl}
                     alt={menuItem.name.ua}
                     fill
-                    objectFit={'cover'}
+                    style={{ objectFit: 'cover' }}
                     placeholder="blur"
                     blurDataURL={ImagePlaceholder}
                 />
