@@ -32,7 +32,8 @@ function CategoriesList({ menuItems }: any) {
                         >
                             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                             <a
-                                className="flex items-center justify-center px-4 py-1 rounded-2xl bg-neutral-800 font-semibold hover:bg-white hover:text-neutral-800"
+                                className="flex items-center justify-center px-4 py-1 rounded-2xl
+                                bg-neutral-800 font-semibold hover:bg-white hover:text-neutral-800"
                                 href={`#${subId}`}
                             >
                                 {`${name.ua} ${name.eng ? '/' : ''} ${name.eng}`}
