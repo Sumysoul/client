@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import CocktailsTypes from '@/components/CocktailsTypes';
 import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 
 function Drinks({ data }: any) {
     const { groups } = data;
@@ -13,6 +14,8 @@ function Drinks({ data }: any) {
             </main>
 
             <Footer />
+
+            <Navigation />
         </>
     );
 }

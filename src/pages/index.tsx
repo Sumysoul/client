@@ -3,6 +3,7 @@ import axios from 'axios';
 import MenuList from '@/components/MenuList';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
 
 function Home({ data }: any) {
     const { groups } = data;
@@ -16,6 +17,8 @@ function Home({ data }: any) {
             </main>
 
             <Footer />
+
+            <Navigation />
         </>
     );
 }
