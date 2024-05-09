@@ -21,10 +21,6 @@ function CategoriesList({ menuItems }: any) {
                 {menuItems.map((menuItem: any, index: number) => {
                     const { name, subId } = menuItem;
 
-                    if (!menuItem.imageUrl) {
-                        return null;
-                    }
-
                     return (
                         <SwiperSlide
                             className="!w-auto flex box-border"
