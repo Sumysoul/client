@@ -23,7 +23,7 @@ function Home({ data }: any) {
     );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     const { data } = await axios.get(`${process.env.BE_URL}/food`);
 
     return {

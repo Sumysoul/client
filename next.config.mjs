@@ -15,6 +15,12 @@ const nextConfig = {
                 port: '',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'soul-menu-qa.s3.eu-central-1.amazonaws.com',
+                port: '',
+                pathname: '/**',
+            },
         ],
     },
 };
