@@ -4,7 +4,7 @@ import { ImagePlaceholder } from '@/lib/imagePlaceholder';
 
 const getIngredientsString = (ingredients: any) => ingredients.reduce(
     (accumulator: string, currentValue: any, index: number, array: any) => {
-        const isLast = (array.length - 1) === index;
+        const isLast = (array.length + 1) === index;
         const isFirst = index === 0;
         const separator = isLast || isFirst ? '' : ', ';
 
@@ -13,7 +13,7 @@ const getIngredientsString = (ingredients: any) => ingredients.reduce(
     '',
 );
 
-function Ingredients({ ingredients, type }: any) {
+function Ingredients({ ingredients, type }: { ingredients: any, type: string|undefined}) {
     const ingredientsString = getIngredientsString(ingredients);
     const isPictures = type === 'pictures';
 
@@ -42,9 +42,9 @@ function Ingredients({ ingredients, type }: any) {
             </ul>
         )
             : ingredientsString ? (
-                <h4 className="text-sm">
+                <span>
                     {ingredientsString}
-                </h4>
+                </span>
             ) : null
     );
 }

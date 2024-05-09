@@ -14,13 +14,18 @@ function ProductsListItem({ productItem }: any) {
 
                 <h4 className="text-sm">{name.eng}</h4>
 
-                <Ingredients ingredients={ingredients} />
+                <Ingredients
+                    ingredients={ingredients}
+                    type="inline"
+                />
             </div>
 
-            <PricePerUnit
-                pricesPerUnitItems={prices}
-                volumeUnit={volumeUnit}
-            />
+            <div className="text-sm">
+                <PricePerUnit
+                    pricesPerUnitItems={prices}
+                    volumeUnit={volumeUnit}
+                />
+            </div>
         </div>
     );
 }
