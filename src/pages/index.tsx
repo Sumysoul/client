@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MenuList from '@/components/MenuList';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 
-function Home({ data }: any) {
+function Home() {
+    const [data, setData] = useState({});
+    // @ts-ignore
     const { groups } = data;
+
+    useEffect(() => {
+        async function getData() {
+            const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BE_URL}/food`);
+            setData(data);
+        }
+
+        getData();
+    }, []);
+
+    if (!groups) {
+        return null;
+    }
 
     return (
         <>
@@ -22,13 +37,5 @@ function Home({ data }: any) {
         </>
     );
 }
-
-export const getStaticProps = async () => {
-    const { data } = await axios.get(`${process.env.BE_URL}/food`);
-
-    return {
-        props: { data },
-    };
-};
 
 export default Home;

@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CocktailsTypes from '@/components/CocktailsTypes';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 
-function Drinks({ data }: any) {
+function Drinks() {
+    const [data, setData] = useState({});
+    // @ts-ignore
     const { groups } = data;
+
+    useEffect(() => {
+        async function getData() {
+            const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BE_URL}/drinks`);
+            setData(data);
+        }
+
+        getData();
+    }, []);
+
+    if (!groups) {
+        return null;
+    }
 
     return (
         <>
@@ -19,13 +34,5 @@ function Drinks({ data }: any) {
         </>
     );
 }
-
-export const getStaticProps = async () => {
-    const { data } = await axios.get(`${process.env.BE_URL}/drinks`);
-
-    return {
-        props: { data },
-    };
-};
 
 export default Drinks;
