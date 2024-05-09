@@ -20,11 +20,14 @@ function Ingredients({ ingredients, type }: any) {
     return (
         isPictures ? (
             <ul className="flex flex-wrap gap-1 md:gap-4 items-center">
-                {ingredients.map((ingredient: any) => {
-                    const { imageUrl, name } = ingredient;
+                {ingredients.map((ingredient: any, index: number) => {
+                    const { imageUrl, name, subId } = ingredient;
 
                     return (
-                        <li className="h-[40px] w-[40px] md:h-[70px] md:w-[70px] rounded overflow-hidden relative">
+                        <li
+                            key={subId + index}
+                            className="h-[40px] w-[40px] md:h-[70px] md:w-[70px] rounded overflow-hidden relative"
+                        >
                             <Image
                                 src={imageUrl}
                                 alt={name.ua}
