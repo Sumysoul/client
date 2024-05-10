@@ -24,19 +24,21 @@ function Ingredients({ ingredients, type }: { ingredients: any, type: string|und
                     const { imageUrl, name, subId } = ingredient;
 
                     return (
-                        <li
-                            key={subId + index}
-                            className="h-[40px] w-[40px] md:h-[70px] md:w-[70px] rounded overflow-hidden relative"
-                        >
-                            <Image
-                                src={imageUrl}
-                                alt={name.ua}
-                                fill
-                                style={{ objectFit: 'cover' }}
-                                placeholder="blur"
-                                blurDataURL={ImagePlaceholder}
-                            />
-                        </li>
+                        imageUrl && (
+                            <li
+                                key={subId + index}
+                                className="h-[40px] w-[40px] md:h-[70px] md:w-[70px] rounded overflow-hidden relative"
+                            >
+                                <Image
+                                    src={imageUrl}
+                                    alt={name.ua}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    placeholder="blur"
+                                    blurDataURL={ImagePlaceholder}
+                                />
+                            </li>
+                        )
                     );
                 })}
             </ul>

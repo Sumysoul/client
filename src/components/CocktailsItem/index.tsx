@@ -23,14 +23,16 @@ function CocktailsItem({ cocktailsItem }: any) {
                 setIsActive={setIsDialogActive}
             >
                 <div className="flex flex-col gap-4 text-black items-center relative">
-                    <Image
-                        src={imageUrl}
-                        alt={name.ua}
-                        width={200}
-                        height={200}
-                        placeholder="blur"
-                        blurDataURL={ImagePlaceholder}
-                    />
+                    {imageUrl && (
+                        <Image
+                            src={imageUrl}
+                            alt={name.ua}
+                            width={200}
+                            height={200}
+                            placeholder="blur"
+                            blurDataURL={ImagePlaceholder}
+                        />
+                    )}
 
                     <div className="text-2xl font-semibold">{name.ua}</div>
 
@@ -54,14 +56,16 @@ function CocktailsItem({ cocktailsItem }: any) {
                     >
                         <FaRegEye size={30} className="absolute top-0 left-0 z-10 m-3 text-gray-600" />
 
-                        <Image
-                            src={imageUrl}
-                            alt={name.ua}
-                            fill
-                            style={{ objectFit: 'cover' }}
-                            placeholder="blur"
-                            blurDataURL={ImagePlaceholder}
-                        />
+                        {imageUrl && (
+                            <Image
+                                src={imageUrl}
+                                alt={name.ua}
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                placeholder="blur"
+                                blurDataURL={ImagePlaceholder}
+                            />
+                        )}
                     </div>
                 </div>
 
