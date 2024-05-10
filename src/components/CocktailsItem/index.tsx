@@ -46,7 +46,7 @@ function CocktailsItem({ cocktailsItem }: any) {
                         )}
                     </div>
 
-                    <div className="text-2xl font-semibold">{name.ua}</div>
+                    <div className="text-2xl text-center font-semibold">{name.ua}</div>
 
                     <div className="text-xl text-center text-gray-500 max-w-[400px]">
                         <Ingredients
