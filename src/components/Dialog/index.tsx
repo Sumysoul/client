@@ -48,12 +48,12 @@ function Dialog({ isActive, setIsActive, children }: any) {
         >
             <div className="w-full bg-white p-8 overflow-hidden rounded-xl">
                 <button
-                    className="absolute top-0 right-0 text-black p-6 text-2xl hover:text-gray-500"
+                    className="absolute top-0 right-0 text-black p-6 text-2xl hover:text-gray-500 z-10"
                     type="button"
                     onClick={() => { setIsActive(false); }}
                     title="close"
                 >
-                    <CgClose />
+                    <CgClose className="pointer-events-none" />
                 </button>
 
                 {children}
