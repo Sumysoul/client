@@ -19,14 +19,14 @@ const pages = [
 ];
 
 function Navigation() {
-    const { asPath } = useRouter();
+    const router = useRouter();
+    const { pathname } = router;
 
     return (
         <nav className="flex fixed bottom-0 right-0 p-6">
             {pages.map((page, index) => {
                 const { url, title, NavIcon } = page;
-                const normalPath = asPath !== '/' ? asPath.substring(0, asPath.length - 1) : asPath;
-                const isActive = normalPath === url;
+                const isActive = pathname === url;
 
                 return (
                     isActive ? null : (
