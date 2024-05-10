@@ -23,16 +23,28 @@ function CocktailsItem({ cocktailsItem }: any) {
                 setIsActive={setIsDialogActive}
             >
                 <div className="flex flex-col gap-4 text-black items-center relative">
-                    {imageUrl && (
-                        <Image
-                            src={imageUrl}
-                            alt={name.ua}
-                            width={200}
-                            height={200}
-                            placeholder="blur"
-                            blurDataURL={ImagePlaceholder}
-                        />
-                    )}
+                    <div className="h-[200px] w-[200px] relative">
+                        <div className="absolute left-[-20px] top-[-20px] z-10">
+                            <PricePerUnit
+                                pricesPerUnitItems={prices}
+                                volumeUnit={volumeUnit}
+                                priceUnit={priceUnit}
+                                type="rounded"
+                            />
+                        </div>
+
+                        {imageUrl && (
+                            <Image
+                                className="shadow-xl rounded-full"
+                                src={imageUrl}
+                                alt={name.ua}
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                placeholder="blur"
+                                blurDataURL={ImagePlaceholder}
+                            />
+                        )}
+                    </div>
 
                     <div className="text-2xl font-semibold">{name.ua}</div>
 

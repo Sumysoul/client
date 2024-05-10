@@ -24,6 +24,7 @@ function ProductsListItem({ productItem }: any) {
                 <PricePerUnit
                     pricesPerUnitItems={prices}
                     volumeUnit={volumeUnit}
+                    type="vertical"
                 />
             </div>
         </div>
