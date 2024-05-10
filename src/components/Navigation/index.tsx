@@ -25,7 +25,8 @@ function Navigation() {
         <nav className="flex fixed bottom-0 right-0 p-6">
             {pages.map((page, index) => {
                 const { url, title, NavIcon } = page;
-                const isActive = url === asPath;
+                const normalPath = asPath !== '/' ? asPath.substring(0, asPath.length - 1) : asPath;
+                const isActive = normalPath === url;
 
                 return (
                     isActive ? null : (
@@ -47,4 +48,5 @@ function Navigation() {
         </nav>
     );
 }
+
 export default Navigation;
