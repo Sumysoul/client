@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import MenuList from '@/components/MenuList';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import { getData } from '@/lib/dataFetcher';
 
 function Home() {
     const [data, setData] = useState({});
@@ -11,12 +11,7 @@ function Home() {
     const { groups } = data;
 
     useEffect(() => {
-        async function getData() {
-            const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BE_URL}/food`);
-            setData(data);
-        }
-
-        getData();
+        getData(`${process.env.NEXT_PUBLIC_BE_URL}/food`, (data) => setData(data));
     }, []);
 
     if (!groups) {
