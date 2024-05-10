@@ -11,7 +11,7 @@ function Home() {
     const { groups } = data;
 
     useEffect(() => {
-        getData(`${process.env.NEXT_PUBLIC_BE_URL}/food`, (data) => setData(data));
+        getData('/food', setData);
     }, []);
 
     if (!groups) {

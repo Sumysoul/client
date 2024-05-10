@@ -10,7 +10,7 @@ function Drinks() {
     const { groups } = data;
 
     useEffect(() => {
-        getData(`${process.env.NEXT_PUBLIC_BE_URL}/drinks`, (data) => setData(data));
+        getData('/drinks', setData);
     }, []);
 
     if (!groups) {
