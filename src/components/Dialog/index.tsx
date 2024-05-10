@@ -46,7 +46,7 @@ function Dialog({ isActive, setIsActive, children }: any) {
             className="bg-transparent outline-0 backdrop:bg-neutral-800 backdrop:opacity-60"
             ref={dialogRef}
         >
-            <div className="w-full h-full bg-white p-8 overflow-hidden rounded-xl">
+            <div className="w-full bg-white p-8 overflow-hidden rounded-xl">
                 <button
                     className="absolute top-0 right-0 text-black p-6 text-2xl hover:text-gray-500"
                     type="button"
