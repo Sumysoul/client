@@ -2,7 +2,7 @@ import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { IoFastFood } from 'react-icons/io5';
-import { FaGlassMartiniAlt } from 'react-icons/fa';
+// import { FaGlassMartiniAlt } from 'react-icons/fa';
 
 const pages = [
     {
@@ -11,11 +11,11 @@ const pages = [
         NavIcon: IoFastFood
     },
 
-    {
-        title: 'НапоЇ',
-        url: '/drinks',
-        NavIcon: FaGlassMartiniAlt
-    }
+    // {
+    //     title: 'НапоЇ',
+    //     url: '/drinks',
+    //     NavIcon: FaGlassMartiniAlt
+    // }
 ];
 
 function Navigation() {
