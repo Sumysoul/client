@@ -10,7 +10,8 @@ function Drinks() {
     const { groups } = data;
 
     useEffect(() => {
-        getData('/drinks', setData);
+        // @ts-ignore
+        getData(process.env.NEXT_PUBLIC_DRINKS_PATH, setData);
     }, []);
 
     if (!groups) {

@@ -11,7 +11,8 @@ function Home() {
     const { groups } = data;
 
     useEffect(() => {
-        getData('/food', setData);
+        // @ts-ignore
+        getData(process.env.NEXT_PUBLIC_FOOD_PATH, setData);
     }, []);
 
     if (!groups) {
