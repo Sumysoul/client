@@ -2,8 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import ProductsList from '@/components/ProductsList';
 import { ImagePlaceholder } from '@/lib/imagePlaceholder';
+import { MenuListItemTypes } from '@/components/MenuListItem/menuListItem.types';
 
-function MenuListItem({ menuItem }: any) {
+function MenuListItem({ menuItem }: {menuItem: MenuListItemTypes}) {
     const { imageUrl, items, subId } = menuItem;
 
     return (

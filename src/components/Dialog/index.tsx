@@ -1,7 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, ReactNode } from 'react';
 import { CgClose } from 'react-icons/cg';
 
-function Dialog({ isActive, setIsActive, children }: any) {
+// eslint-disable-next-line no-unused-vars
+function Dialog({ isActive, setIsActive, children }: { isActive: boolean, setIsActive: (isActive: boolean) => void, children: ReactNode}) {
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     useEffect(() => {

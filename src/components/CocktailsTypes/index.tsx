@@ -1,13 +1,18 @@
 import React from 'react';
 import Cocktails from '@/components/Cocktails';
+import {
+    CocktailsTypesType,
+    CocktailsType,
+    CocktailsGroupsType
+} from '@/components/CocktailsTypes/Coctails.types';
 
-function CocktailsTypes({ cocktailsTypes }: any) {
+function CocktailsTypes({ cocktailsTypes }: { cocktailsTypes: CocktailsTypesType }) {
     return (
-        cocktailsTypes.map((cocktailsType: any) => {
+        cocktailsTypes.map((cocktailsType: CocktailsType) => {
             const { groups } = cocktailsType;
 
             return (
-                groups.map((group: any) => {
+                groups.map((group: CocktailsGroupsType) => {
                     const { subId, items, name } = group;
 
                     return (
