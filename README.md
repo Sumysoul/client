@@ -38,3 +38,8 @@ npm run dev
 ## Integration with [back-end](https://github.com/Sumysoul/server)
 
 - [Refer to build static website section](https://github.com/Sumysoul/server/blob/master/README.md#run-scrips)
+
+## Contributors
+
+- **[cs5chester](https://github.com/cs5chester)**
+- **[Igor Dumchykov](https://github.com/igordumchykov)**
