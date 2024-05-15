@@ -1,10 +1,11 @@
 import React from 'react';
 import Ingredients from '@/components/Ingredients';
 import PricePerUnit from '@/components/PricePerUnit';
+import { ProductsListItemType } from '@/components/ProductsListItem/ProductsListItem.types';
 
-function ProductsListItem({ productItem }: any) {
+function ProductsListItem({ productItem }: { productItem: ProductsListItemType }) {
     const {
-        name, ingredients, volumeUnit, prices
+        name, ingredients, volumeUnit, priceUnit, prices
     } = productItem;
 
     return (
@@ -25,6 +26,7 @@ function ProductsListItem({ productItem }: any) {
                     pricesPerUnitItems={prices}
                     volumeUnit={volumeUnit}
                     type="vertical"
+                    priceUnit={priceUnit}
                 />
             </div>
         </div>

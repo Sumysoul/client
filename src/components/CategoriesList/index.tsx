@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
+import { MenuListItemsTypes } from '@/components/MenuList/menuList.types';
 
-function CategoriesList({ menuItems }: any) {
+function CategoriesList({ menuItems }: { menuItems: MenuListItemsTypes }) {
     const [isVisible, setIsVisible] = useState(false);
     const onSwiperInit = () => {
         setIsVisible(true);

@@ -5,8 +5,9 @@ import PricePerUnit from '@/components/PricePerUnit';
 import Ingredients from '@/components/Ingredients';
 import Dialog from '@/components/Dialog';
 import { FaRegEye } from 'react-icons/fa';
+import { CocktailItemType } from '@/components/CocktailsItem/CocktailsItem.types';
 
-function CocktailsItem({ cocktailsItem }: any) {
+function CocktailsItem({ cocktailsItem }: { cocktailsItem: CocktailItemType }) {
     const {
         imageUrl, name, prices, volumeUnit, priceUnit, ingredients
     } = cocktailsItem;

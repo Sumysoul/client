@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { ImagePlaceholder } from '@/lib/imagePlaceholder';
+import { IngredientsTypes, IngredientsType, Ingredient } from '@/components/Ingredients/Ingredients.types';
 
-const getIngredientsString = (ingredients: any) => ingredients.reduce(
+const getIngredientsString = (ingredients: IngredientsTypes) => ingredients.reduce(
     (accumulator: string, currentValue: any, index: number, array: any) => {
         const isLast = (array.length + 1) === index;
         const isFirst = index === 0;
@@ -13,14 +14,14 @@ const getIngredientsString = (ingredients: any) => ingredients.reduce(
     '',
 );
 
-function Ingredients({ ingredients, type }: { ingredients: any, type: string|undefined}) {
+function Ingredients({ ingredients, type }: { ingredients: IngredientsTypes, type: IngredientsType}) {
     const ingredientsString = getIngredientsString(ingredients);
     const isPictures = type === 'pictures';
 
     return (
         isPictures ? (
             <ul className="flex flex-wrap gap-1 md:gap-4 items-center">
-                {ingredients.map((ingredient: any, index: number) => {
+                {ingredients.map((ingredient: Ingredient, index: number) => {
                     const { imageUrl, name, subId } = ingredient;
 
                     return (

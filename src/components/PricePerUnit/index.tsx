@@ -1,8 +1,11 @@
 import React from 'react';
+import {
+    PricesPerUnitItemsType, PricesPerUnitItemType, VolumeUnitType, PriceUnitType, TypeComponentType
+} from '@/components/PricePerUnit/PricePerUnit.types';
 
 function PricePerUnit({
     pricesPerUnitItems, volumeUnit, priceUnit, type
-}: any) {
+}: { pricesPerUnitItems: PricesPerUnitItemsType, volumeUnit: VolumeUnitType, priceUnit: PriceUnitType, type: TypeComponentType}) {
     const isInline = type === 'inline';
     const isVertical = type === 'vertical';
     const isRounded = type === 'rounded';
@@ -10,7 +13,7 @@ function PricePerUnit({
     if (isInline) {
         return (
             <div className="flex flex-col">
-                {pricesPerUnitItems.map((pricesPerUnitItem: any, index: any) => {
+                {pricesPerUnitItems.map((pricesPerUnitItem: PricesPerUnitItemType, index: number) => {
                     const { price, volume } = pricesPerUnitItem;
                     const stringToRender = `${price}${priceUnit.eng}/${volume}${volumeUnit.ua}`;
 
@@ -30,7 +33,7 @@ function PricePerUnit({
     if (isVertical) {
         return (
             <div className="flex gap-4 flex-wrap justify-end">
-                {pricesPerUnitItems.map((pricesPerUnitItem: any, index: any) => {
+                {pricesPerUnitItems.map((pricesPerUnitItem: PricesPerUnitItemType, index: number) => {
                     const { price, volume } = pricesPerUnitItem;
 
                     return (
@@ -50,7 +53,7 @@ function PricePerUnit({
     if (isRounded) {
         return (
             <div className="flex gap-4 flex-wrap">
-                {pricesPerUnitItems.map((pricesPerUnitItem: any, index: any) => {
+                {pricesPerUnitItems.map((pricesPerUnitItem: PricesPerUnitItemType, index: number) => {
                     const { price, volume } = pricesPerUnitItem;
 
                     return (

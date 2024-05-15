@@ -3,20 +3,21 @@ import CocktailsTypes from '@/components/CocktailsTypes';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 import { getData } from '@/lib/dataFetcher';
+import { BackendDataType } from '@/commonTypes/backend-data.types';
 
 function Drinks() {
-    const [data, setData] = useState({});
-    // @ts-ignore
-    const { groups } = data;
+    const [data, setData] = useState<BackendDataType>(null);
 
     useEffect(() => {
         // @ts-ignore
         getData(process.env.NEXT_PUBLIC_DRINKS_PATH, setData);
     }, []);
 
-    if (!groups) {
+    if (!data?.groups) {
         return null;
     }
+
+    const { groups } = data;
 
     return (
         <>
