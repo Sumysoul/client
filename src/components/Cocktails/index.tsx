@@ -7,6 +7,9 @@ function Cocktails({ cocktailsItems }: { cocktailsItems: CocktailsItemsType }) {
     return (
         <div className="flex flex-col w-full gap-5">
             {cocktailsItems.map((cocktailsItem: CocktailItemType, index: number) => {
+                if (!cocktailsItem.available) {
+                    return;
+                }
                 const { subId } = cocktailsItem;
                 return (
                     <CocktailsItem

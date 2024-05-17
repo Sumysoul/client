@@ -8,4 +8,5 @@ export type ProductsListItemType = {
     volumeUnit: VolumeUnitType
     priceUnit: PriceUnitType
     prices: PricesPerUnitItemType []
+    available: boolean
 }

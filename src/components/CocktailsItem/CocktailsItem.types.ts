@@ -10,4 +10,5 @@ export type CocktailItemType = {
     volumeUnit: VolumeUnitType
     priceUnit: PriceUnitType
     ingredients: IngredientsTypes
+    available: boolean
 }
